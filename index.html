@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grokipedia - Where Knowledge Becomes a Meme</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'brand-dark': '#0B0F14',
+              'brand-light-text': '#E6F1FF',
+              'brand-secondary-text': '#9FB3C8',
+              'brand-cyan': '#7DF9FF',
+              'brand-purple': '#A855F7',
+            },
+            fontFamily: {
+              'sans': ['Inter', 'sans-serif'],
+              'grotesk': ['Space Grotesk', 'sans-serif'],
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0B0F14;
+        color: #E6F1FF;
+      }
+      .glassmorphism {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .celestial-bg {
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><filter id="f" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation=".2"/></filter></defs><circle cx="5" cy="5" r=".5" fill="white" filter="url(%23f)"/><circle cx="15" cy="20" r=".5" fill="white" filter="url(%23f)"/><circle cx="30" cy="10" r=".5" fill="white" filter="url(%23f)"/><circle cx="25" cy="40" r=".5" fill="white" filter="url(%23f)"/><circle cx="50" cy="50" r=".5" fill="white" filter="url(%23f)"/><circle cx="60" cy="30" r=".5" fill="white" filter="url(%23f)"/><circle cx="75" cy="15" r=".5" fill="white" filter="url(%23f)"/><circle cx="90" cy="45" r=".5" fill="white" filter="url(%23f)"/><circle cx="40" cy="70" r=".5" fill="white" filter="url(%23f)"/><circle cx="80" cy="85" r=".5" fill="white" filter="url(%23f)"/><circle cx="95" cy="95" r=".5" fill="white" filter="url(%23f)"/><circle cx="5" cy="90" r=".5" fill="white" filter="url(%23f)"/></svg>');
+        background-repeat: repeat;
+        background-size: 200px 200px;
+        animation: move-stars 120s linear infinite;
+      }
+      @keyframes move-stars {
+        from { background-position: 0 0; }
+        to { background-position: -1000px 500px; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.3.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>
+  </body>
+</html>
